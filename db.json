@@ -1,9 +1,22 @@
 {
   "users": [
-    { "id": "23", "firstName": "Bill", "age": 20 },
-    { "id": "1", "firstName": "Samantha", "age": 21 },
-    { "id": "15", "firstName": "Sinead", "age": 21 },
-    { "id": "9", "firstName": "Kevin", "age": 31 },
-    { "id": "11", "firstName": "David", "age": 46 }
+    { "id": "23", "firstName": "Bill", "age": 20, "companyId": "1" },
+    { "id": "47", "firstName": "Alex", "age": 40, "companyId": "4" },
+    { "id": "33", "firstName": "Sam", "age": 30, "companyId": "3" },
+    { "id": "1", "firstName": "Samantha", "age": 21, "companyId": "4" },
+    { "id": "15", "firstName": "Sinead", "age": 21, "companyId": "5" },
+    { "id": "9", "firstName": "Kevin", "age": 31, "companyId": "2" },
+    { "id": "11", "firstName": "David", "age": 46, "companyId": "6" },
+    { "id": "13", "firstName": "John", "age": 25, "companyId": "2" },
+    { "id": "17", "firstName": "Jane", "age": 35, "companyId": "2" },
+    { "id": "19", "firstName": "Tom", "age": 26, "companyId": "3" }
+  ],
+  "companies": [
+    { "id": "1", "name": "Google", "description": "Search Engine" },
+    { "id": "2", "name": "Facebook", "description": "Social Media" },
+    { "id": "3", "name": "Uber", "description": "Transportation" },
+    { "id": "4", "name": "Twitter", "description": "Social Media" },
+    { "id": "5", "name": "Instagram", "description": "Social Media" },
+    { "id": "6", "name": "Snapchat", "description": "Social Media" }
   ]
 }

@@ -12,6 +12,15 @@ const UserType = new GraphQLObjectType({
   },
 });
 
+const CompanyType = new GraphQLObjectType({
+  name: 'Company',
+  fields: {
+    id: { yupe: GraphQLString },
+    name: { type: GraphQLString },
+    description: { type: GraphQLString },
+  },
+});
+
 const RootQuery = new GraphQLObjectType({
   name: 'RootQuery',
   fields: {
