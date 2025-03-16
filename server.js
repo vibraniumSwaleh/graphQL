@@ -1,5 +1,6 @@
 import express from 'express';
 import expressGraphQL from 'express-graphql';
+import schema from './schema/schema.js';
 
 const app = express();
 const graphql = expressGraphQL.graphqlHTTP;
@@ -7,6 +8,7 @@ const graphql = expressGraphQL.graphqlHTTP;
 app.use(
   '/graphql',
   graphql({
+    schema,
     graphiql: true,
   }),
 );

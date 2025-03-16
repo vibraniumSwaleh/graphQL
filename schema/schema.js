@@ -1,6 +1,7 @@
-import graphql, { GraphQLInt, GraphQLString } from 'graphql';
+import graphql from 'graphql';
+import _ from 'lodash';
 
-const { GraphQLObjectType, GraphQLString, GraphQLInt } = graphql;
+const { GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLSchema } = graphql;
 
 const UserType = new GraphQLObjectType({
   name: 'User',
@@ -14,8 +15,18 @@ const UserType = new GraphQLObjectType({
 const RootQuery = new GraphQLObjectType({
   name: 'RootQuery',
   fields: {
-    user: { type: UserType },
-    args: { id: { type: GraphQLString } },
-    resovle(parentValue, args) {},
+    user: {
+      type: UserType,
+      args: { id: { type: GraphQLString } },
+      resolve(parentValue, args) {
+        return _.find(users, { id: args.id });
+      },
+    },
   },
 });
+
+const schema = new GraphQLSchema({
+  query: RootQuery,
+});
+
+export default schema;
